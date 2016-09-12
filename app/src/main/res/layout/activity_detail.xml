@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/activity_horizontal_margin">
+        <ImageView
+            android:id="@+id/image"
+            android:contentDescription="@string/detailAvatarDescription"
+            android:layout_width="@dimen/detail_image_width"
+            android:layout_height="@dimen/detail_image_height" />
+        <TextView
+            android:id="@+id/usernameTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/image"
+            android:layout_toRightOf="@+id/image"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:text="@string/detailUsernameTitle"
+            style="@style/Base.TextAppearance.AppCompat.Medium"/>
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/usernameTitle"
+            android:layout_toEndOf="@+id/usernameTitle"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            style="@style/Base.TextAppearance.AppCompat.Medium"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/username"
+            android:layout_toEndOf="@+id/image"
+            android:layout_toRightOf="@+id/image"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:textStyle="bold"
+            style="@style/Base.TextAppearance.AppCompat.Medium"/>
+        <TextView
+            android:id="@+id/bodyTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image"
+            android:text="@string/detailBodyTitle"
+            style="@style/Base.TextAppearance.AppCompat.Medium"/>
+        <TextView
+            android:id="@+id/body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bodyTitle"
+            style="@style/Base.TextAppearance.AppCompat.Medium"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomSheet"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/detail_bottom_sheet_margin_top"
+        android:background="#fff"
+        android:gravity="center"
+        android:padding="@dimen/activity_horizontal_margin"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/sheetList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

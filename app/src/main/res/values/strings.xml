@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">User Posts</string>
+    <string name="splashWait">Please Wait</string>
+
+    <string name="postListTitle">Post List</string>
+    <string name="postDetailTitle">Post Detail</string>
+    <string name="detailUsernameTitle">Username:</string>
+    <string name="detailBodyTitle">Post:</string>
+    <string name="detailAvatarDescription">Users Avatar</string>
+</resources>
